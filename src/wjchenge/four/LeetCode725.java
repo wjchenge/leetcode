@@ -18,7 +18,7 @@ public class LeetCode725 {
 
         int subSize = size / k;
         int carry = size % k;
-        for (int i = 0; i < k; i++) {
+        for (int i = 0; i < k && root != null; i++) {
             size = subSize + (carry-- > 0 ? 1 : 0);
             result[i] = root;
             while (root != null && size-- > 1) {
